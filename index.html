@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jejak Tontonanku</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="head_bar">
+    <h1 class="head_bar__title">Jejak Tontonanku</h1>
+  </header>
+  <main>
+    <section class="input_section">
+      <h2>Masukkan Film Baru</h2>
+      <form id="inputFilm">
+        <div class="input">
+          <label for="inputFilmTitle">Judul</label>
+          <input id="inputFilmTitle" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputFilmYear">Tahun</label>
+          <input id="inputFilmYear" type="number" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputFilmIsComplete">Selesai ditonton</label>
+          <input id="inputFilmIsComplete" type="checkbox">
+        </div>
+        <button id="filmSubmit" type="submit">Masukkan flim ke List</button>
+      </form>
+    </section>
+
+    <section class="search_section">
+      <h2>Cari Film (Opsional)</h2>
+      <form id="searchFilm">
+        <label for="searchFilmTitle">Film</label>
+        <input id="searchFilmTitle" type="text">
+        <button id="searchSubmit" type="button">Cari</button>
+      </form>
+    </section>
+
+    <div id="searchDiv" class="filmku">
+      <h2>Search Results</h2>
+      <div id="searchResultsList" class="flim_list"></div>
+
+    </div>
+
+    <div class="popup" id="popup">
+      <h3>Edit Film</h3>
+      <br>
+      <div class="popup-content">
+        <label for="field1">Judul:</label>
+        <input type="text" id="editJudul">
+
+        <label for="field3">Tahun:</label>
+        <input type="text" id="editTahun">
+
+        <input type="hidden" id="editID">
+
+        <div class="divButtons">
+          <label for="checkbox">Selesai dibaca:</label>
+          <input type="checkbox" id="editCheckbox">
+        </div>
+
+      </div>
+      <div class="popup-buttons">
+        <button id="confirmEdit" class="green">Confirm</button>
+        <button id="cancelEdit" class="red">Cancel</button>
+      </div>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+      <h3>Apakah anda mau meghapus Film ini?</h3>
+      <div class="popup-buttons">
+        <button id="deleteConfirm" class="green">Confirm</button>
+        <button id="deleteCancel" class="red">Cancel</button>
+      </div>
+    </div>
+
+    <section class="filmku">
+      <h2>Belum selesai ditonton</h2>
+
+      <div id="incompleteFilmkuList" class="flim_list">
+        <!-- <article class="book_item">
+          <h3>Book Title</h3>
+          <p>Penulis: John Doe</p>
+          <p>Tahun: 2002</p>
+
+          <div class="action">
+            <button class="green">Selesai dibaca</button>
+            <button class="red">Hapus buku</button>
+          </div>
+        </article> -->
+
+      </div>
+    </section>
+
+    <section class="filmku">
+      <h2>Selesai dibaca</h2>
+
+      <div id="completeFilmkuList" class="flim_list">
+        <!-- <article class="book_item">
+          <h3>Book Title</h3>
+          <p>Penulis: John Doe</p>
+          <p>Tahun: 2002</p>
+
+          <div class="action">
+            <button class="green">Belum selesai di Baca</button>
+            <button class="red">Hapus buku</button>
+          </div>
+        </article> -->
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>

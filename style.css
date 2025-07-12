@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #DFD0B8;
+}
+
+input,
+button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #393E46;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #948979;
+}
+
+.input_section>h2 {
+    text-align: center;
+    color: #222831;
+}
+
+.input_section>form>.input {
+    margin: 8px 0;
+    
+}
+
+.input_section>form>.input>input {
+    background-color: white;
+    
+}
+
+.input_section>form>button {
+    background-color: #222831;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section>form>button>span {
+    font-weight: bold;
+}
+
+.input_section>form>.input>input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+.input_section>form>.input>label {
+    color: #222831;
+    font-weight: bold;
+}
+
+.input_section>form>.input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section>form>.input_inline>label {
+    color: #222831;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #948979;
+}
+
+.search_section>h2 {
+    color: #222831;
+}
+
+.search_section>form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section>form>label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section>form>input {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+.search_section>form>button {
+    background-color: #222831;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fadeInAnimate {
+    animation-name: pop;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.filmku {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #948979;
+}
+
+.filmku>h2 {
+    color: #222831;
+}
+
+.filmku>.flim_list {
+    padding: 16px;
+}
+
+.filmku>.flim_list>.film_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: #DFD0B8;
+}
+
+.filmku>.flim_list>.film_item>h3,
+p {
+    margin: 8px 0;
+}
+
+.filmku>.flim_list>.film_item>.action>button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filmku>.flim_list>.film_item>.action>.green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.filmku>.flim_list>.film_item>.action>.red {
+    background-color: darkred;
+    color: white;
+}
+
+.filmku>.flim_list>.film_item>.action>.blue {
+    background-color: darkblue;
+    color: white;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 55%; 
+    height: auto;
+    padding: 20px;
+    background-color: #948979;
+    border: 2px solid #222831;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.popup-content>input,
+label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+
+.popup-buttons>button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.red {
+    background-color: darkred;
+    color: white;
+}
+
+.divButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.confirmation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 40vh;
+    left: 30%; 
+    height: 200px;
+    width: 40%;
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+.confirmation > h3 {
+    margin-bottom: 20px;
+}
+
+.disable-scroll{
+    overflow-y: hidden;
+  }
+  
+input[type=checkbox] {
+    transform: scale(1.7);
+}
